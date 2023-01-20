@@ -11,8 +11,6 @@ class RootTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.translatesAutoresizingMaskIntoConstraints = true
-
         // Do any additional setup after loading the view.
     }
     
