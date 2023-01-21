@@ -111,7 +111,7 @@
         <!--HomeViewController-->
         <scene sceneID="dcU-Te-5fP">
             <objects>
-                <viewController id="LjH-v9-QMb" userLabel="HomeViewController" sceneMemberID="viewController">
+                <viewController id="LjH-v9-QMb" userLabel="HomeViewController" customClass="HomeViewController" customModule="Image_gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VDd-xk-etX">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <subviews>
@@ -163,6 +163,9 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="emptyStateStackView" destination="9jP-EJ-Mkd" id="Kji-OK-0LW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="arC-qP-KJS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
