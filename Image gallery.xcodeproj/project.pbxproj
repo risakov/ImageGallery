@@ -9,29 +9,36 @@
 /* Begin PBXBuildFile section */
 		496A39772979638100033B4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A39762979638100033B4A /* AppDelegate.swift */; };
 		496A39792979638100033B4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A39782979638100033B4A /* SceneDelegate.swift */; };
-		496A397E2979638100033B4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 496A397C2979638100033B4A /* Main.storyboard */; };
+		496A397E2979638100033B4A /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 496A397C2979638100033B4A /* Root.storyboard */; };
 		496A39802979638200033B4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 496A397F2979638200033B4A /* Assets.xcassets */; };
 		496A39832979638200033B4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 496A39812979638200033B4A /* LaunchScreen.storyboard */; };
 		496A39982979843300033B4A /* RootTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A39972979843300033B4A /* RootTabBarViewController.swift */; };
-		496A399D297984B700033B4A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A399C297984B700033B4A /* HomeViewController.swift */; };
 		496A39A0297984DF00033B4A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A399F297984DF00033B4A /* CameraViewController.swift */; };
 		496A39A52979854B00033B4A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A39A42979854B00033B4A /* ProfileViewController.swift */; };
-		DE15B7B4297F35B8009C49D2 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE15B7B3297F22DE009C49D2 /* Roboto-Regular.ttf */; };
+		49C18096297F0F2100032872 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49C18095297F0F2100032872 /* Home.storyboard */; };
+		49C59D78297F3F3C000DF3FA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C59D77297F3F3C000DF3FA /* HomeViewController.swift */; };
+		49C59D7C297F417D000DF3FA /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49C59D7B297F415A000DF3FA /* Roboto-Regular.ttf */; };
+		49C59D7E297F428A000DF3FA /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49C59D7D297F428A000DF3FA /* Camera.storyboard */; };
+		49C59D80297F44C5000DF3FA /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49C59D7F297F44C5000DF3FA /* Profile.storyboard */; };
+		DE15B7B4297F35B8009C49D2 /* (null) in Resources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		496A39732979638100033B4A /* Image gallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Image gallery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		496A39762979638100033B4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		496A39782979638100033B4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		496A397D2979638100033B4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		496A397D2979638100033B4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Root.storyboard; sourceTree = "<group>"; };
 		496A397F2979638200033B4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		496A39822979638200033B4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		496A39842979638200033B4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		496A39972979843300033B4A /* RootTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarViewController.swift; sourceTree = "<group>"; };
-		496A399C297984B700033B4A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		496A399F297984DF00033B4A /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		496A39A42979854B00033B4A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		DE15B7B3297F22DE009C49D2 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		49C18095297F0F2100032872 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		49C59D77297F3F3C000DF3FA /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		49C59D7B297F415A000DF3FA /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		49C59D7D297F428A000DF3FA /* Camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
+		49C59D7F297F44C5000DF3FA /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +73,8 @@
 			children = (
 				4985988D2979A2E300B0D56D /* Recources */,
 				496A3996297983E200033B4A /* Source */,
-				496A39762979638100033B4A /* AppDelegate.swift */,
 				496A39782979638100033B4A /* SceneDelegate.swift */,
-				496A397C2979638100033B4A /* Main.storyboard */,
+				496A397C2979638100033B4A /* Root.storyboard */,
 				496A397F2979638200033B4A /* Assets.xcassets */,
 				496A39812979638200033B4A /* LaunchScreen.storyboard */,
 				496A39842979638200033B4A /* Info.plist */,
@@ -84,6 +90,7 @@
 				496A399E297984C500033B4A /* Camera */,
 				496C124D29798CE000637E4C /* Home */,
 				496A39972979843300033B4A /* RootTabBarViewController.swift */,
+				496A39762979638100033B4A /* AppDelegate.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -94,7 +101,6 @@
 				DE15B7B0297F225A009C49D2 /* Model */,
 				DE15B7AF297F2255009C49D2 /* View */,
 				DE15B7AE297F224E009C49D2 /* Controller */,
-				496A399F297984DF00033B4A /* CameraViewController.swift */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -105,7 +111,6 @@
 				DE15B7AC297F2231009C49D2 /* Model */,
 				DE15B7A9297F2136009C49D2 /* View */,
 				DE15B7AD297F2239009C49D2 /* Controller */,
-				496A39A42979854B00033B4A /* ProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -113,9 +118,9 @@
 		496C124D29798CE000637E4C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				49C59D76297F3F3C000DF3FA /* Controller */,
 				DE15B7B2297F226E009C49D2 /* Model */,
 				DE15B7B1297F226A009C49D2 /* View */,
-				DE15B7A5297F20E5009C49D2 /* Controller */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -123,15 +128,15 @@
 		4985988D2979A2E300B0D56D /* Recources */ = {
 			isa = PBXGroup;
 			children = (
-				DE15B7B3297F22DE009C49D2 /* Roboto-Regular.ttf */,
+				49C59D7B297F415A000DF3FA /* Roboto-Regular.ttf */,
 			);
 			path = Recources;
 			sourceTree = "<group>";
 		};
-		DE15B7A5297F20E5009C49D2 /* Controller */ = {
+		49C59D76297F3F3C000DF3FA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				496A399C297984B700033B4A /* HomeViewController.swift */,
+				49C59D77297F3F3C000DF3FA /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 		DE15B7A9297F2136009C49D2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				49C59D7F297F44C5000DF3FA /* Profile.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -160,6 +166,7 @@
 		DE15B7AD297F2239009C49D2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				496A39A42979854B00033B4A /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -167,6 +174,7 @@
 		DE15B7AE297F224E009C49D2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				496A399F297984DF00033B4A /* CameraViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -174,6 +182,7 @@
 		DE15B7AF297F2255009C49D2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				49C59D7D297F428A000DF3FA /* Camera.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,6 +197,7 @@
 		DE15B7B1297F226A009C49D2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				49C18095297F0F2100032872 /* Home.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -257,10 +267,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE15B7B4297F35B8009C49D2 /* Roboto-Regular.ttf in Resources */,
+				49C59D7C297F417D000DF3FA /* Roboto-Regular.ttf in Resources */,
+				DE15B7B4297F35B8009C49D2 /* (null) in Resources */,
 				496A39832979638200033B4A /* LaunchScreen.storyboard in Resources */,
 				496A39802979638200033B4A /* Assets.xcassets in Resources */,
-				496A397E2979638100033B4A /* Main.storyboard in Resources */,
+				49C18096297F0F2100032872 /* Home.storyboard in Resources */,
+				49C59D80297F44C5000DF3FA /* Profile.storyboard in Resources */,
+				49C59D7E297F428A000DF3FA /* Camera.storyboard in Resources */,
+				496A397E2979638100033B4A /* Root.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,19 +290,19 @@
 				496A39A0297984DF00033B4A /* CameraViewController.swift in Sources */,
 				496A39982979843300033B4A /* RootTabBarViewController.swift in Sources */,
 				496A39792979638100033B4A /* SceneDelegate.swift in Sources */,
-				496A399D297984B700033B4A /* HomeViewController.swift in Sources */,
+				49C59D78297F3F3C000DF3FA /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		496A397C2979638100033B4A /* Main.storyboard */ = {
+		496A397C2979638100033B4A /* Root.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				496A397D2979638100033B4A /* Base */,
 			);
-			name = Main.storyboard;
+			name = Root.storyboard;
 			sourceTree = "<group>";
 		};
 		496A39812979638200033B4A /* LaunchScreen.storyboard */ = {
@@ -427,7 +441,7 @@
 				INFOPLIST_FILE = "Image gallery/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Root;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -458,7 +472,7 @@
 				INFOPLIST_FILE = "Image gallery/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Root;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
