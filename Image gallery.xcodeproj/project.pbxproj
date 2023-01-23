@@ -16,6 +16,7 @@
 		496A399D297984B700033B4A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A399C297984B700033B4A /* HomeViewController.swift */; };
 		496A39A0297984DF00033B4A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A399F297984DF00033B4A /* CameraViewController.swift */; };
 		496A39A52979854B00033B4A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A39A42979854B00033B4A /* ProfileViewController.swift */; };
+		DE15B7B4297F35B8009C49D2 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE15B7B3297F22DE009C49D2 /* Roboto-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +31,7 @@
 		496A399C297984B700033B4A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		496A399F297984DF00033B4A /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		496A39A42979854B00033B4A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		498598902979A38200B0D56D /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "../../../Roboto/Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		DE15B7B3297F22DE009C49D2 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +79,7 @@
 		496A3996297983E200033B4A /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				496C125729799C7A00637E4C /* View */,
+				DE15B7AB297F214E009C49D2 /* View */,
 				496A39A1297984E600033B4A /* Profile */,
 				496A399E297984C500033B4A /* Camera */,
 				496C124D29798CE000637E4C /* Home */,
@@ -90,9 +91,9 @@
 		496A399E297984C500033B4A /* Camera */ = {
 			isa = PBXGroup;
 			children = (
-				496C125329799A5B00637E4C /* Controller */,
-				496C125229799A5200637E4C /* Model */,
-				496C125129799A4800637E4C /* View */,
+				DE15B7B0297F225A009C49D2 /* Model */,
+				DE15B7AF297F2255009C49D2 /* View */,
+				DE15B7AE297F224E009C49D2 /* Controller */,
 				496A399F297984DF00033B4A /* CameraViewController.swift */,
 			);
 			path = Camera;
@@ -101,9 +102,9 @@
 		496A39A1297984E600033B4A /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				496C125629799AA300637E4C /* Controller */,
-				496C125529799A9D00637E4C /* View */,
-				496C125429799A9600637E4C /* Model */,
+				DE15B7AC297F2231009C49D2 /* Model */,
+				DE15B7A9297F2136009C49D2 /* View */,
+				DE15B7AD297F2239009C49D2 /* Controller */,
 				496A39A42979854B00033B4A /* ProfileViewController.swift */,
 			);
 			path = Profile;
@@ -112,90 +113,90 @@
 		496C124D29798CE000637E4C /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				496C125029799A4100637E4C /* View */,
-				496C124F29799A1F00637E4C /* Model */,
-				496C124E29799A0800637E4C /* Controller */,
-				496A399C297984B700033B4A /* HomeViewController.swift */,
+				DE15B7B2297F226E009C49D2 /* Model */,
+				DE15B7B1297F226A009C49D2 /* View */,
+				DE15B7A5297F20E5009C49D2 /* Controller */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		496C124E29799A0800637E4C /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		496C124F29799A1F00637E4C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		496C125029799A4100637E4C /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		496C125129799A4800637E4C /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		496C125229799A5200637E4C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		496C125329799A5B00637E4C /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		496C125429799A9600637E4C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		496C125529799A9D00637E4C /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		496C125629799AA300637E4C /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		496C125729799C7A00637E4C /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		4985988D2979A2E300B0D56D /* Recources */ = {
 			isa = PBXGroup;
 			children = (
-				498598902979A38200B0D56D /* Roboto-Regular.ttf */,
+				DE15B7B3297F22DE009C49D2 /* Roboto-Regular.ttf */,
 			);
 			path = Recources;
+			sourceTree = "<group>";
+		};
+		DE15B7A5297F20E5009C49D2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				496A399C297984B700033B4A /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DE15B7A9297F2136009C49D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE15B7AB297F214E009C49D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE15B7AC297F2231009C49D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE15B7AD297F2239009C49D2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DE15B7AE297F224E009C49D2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DE15B7AF297F2255009C49D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE15B7B0297F225A009C49D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE15B7B1297F226A009C49D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE15B7B2297F226E009C49D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE15B7B4297F35B8009C49D2 /* Roboto-Regular.ttf in Resources */,
 				496A39832979638200033B4A /* LaunchScreen.storyboard in Resources */,
 				496A39802979638200033B4A /* Assets.xcassets in Resources */,
 				496A397E2979638100033B4A /* Main.storyboard in Resources */,
