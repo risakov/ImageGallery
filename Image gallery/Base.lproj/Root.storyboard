@@ -5,53 +5,38 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--CameraViewController-->
-        <scene sceneID="uKf-HW-qy0">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xEb-48-GvF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="Wja-Id-4Mr" userLabel="CameraViewController" customClass="CameraViewController" customModule="Image_gallery" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LoK-UR-ugn">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="ZQp-Zn-4aO"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="cameraIcon" selectedImage="cameraIcon" id="hBo-fJ-Ss4" userLabel="cameraIcon"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="174.80916030534351" y="578.87323943661977"/>
-        </scene>
-        <!--ProfileViewController-->
-        <scene sceneID="A57-gL-8YH">
-            <objects>
-                <viewController id="L6r-Uc-QN4" userLabel="ProfileViewController" customClass="ProfileViewController" customModule="Image_gallery" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="f3Z-hT-oGq">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="dmx-LY-0Mg"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="profileIcon" selectedImage="profileIcon" id="fa2-3x-xwT" userLabel="profileIcon"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="G4Z-bn-aNJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="950" y="579"/>
-        </scene>
-        <!--HomeStoryboard-->
+        <!--Home-->
         <scene sceneID="bCo-9s-02Q">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="HomeSb" storyboardName="HomeStoryboard" id="1GX-SL-79s" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="HomeStoryboard" storyboardName="Home" id="1GX-SL-79s" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="homeIcon" selectedImage="homeIcon" id="e5p-UV-A3s" userLabel="homeIcon"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Onm-JZ-cMr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-415" y="262"/>
+            <point key="canvasLocation" x="-90" y="262"/>
+        </scene>
+        <!--Camera-->
+        <scene sceneID="eHT-sR-Ajt">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CameraStoryboard" storyboardName="Camera" id="LDl-3f-ZSj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="cameraIcon" landscapeImage="cameraIcon" largeContentSizeImage="cameraIcon" selectedImage="cameraIcon" id="wLt-tD-P1b" userLabel="cameraIcon"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bo6-J0-PXh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="175" y="262"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="dOS-EU-B3S">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="profileStoryboard" storyboardName="Profile" id="dY6-JG-tA3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="profileIcon" landscapeImage="profileIcon" largeContentSizeImage="profileIcon" selectedImage="profileIcon" id="QN5-I9-otl" userLabel="profileIcon"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RPh-SP-K9u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="462" y="262"/>
         </scene>
         <!--Root Tab Bar View Controller-->
         <scene sceneID="Br3-ZD-d6C">
@@ -71,8 +56,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="1GX-SL-79s" kind="relationship" relationship="viewControllers" id="sEJ-Tk-kM5"/>
-                        <segue destination="Wja-Id-4Mr" kind="relationship" relationship="viewControllers" id="XyH-9d-dPd"/>
-                        <segue destination="L6r-Uc-QN4" kind="relationship" relationship="viewControllers" id="QDV-K0-pli"/>
+                        <segue destination="LDl-3f-ZSj" kind="relationship" relationship="viewControllers" id="Vi6-3z-yr3"/>
+                        <segue destination="dY6-JG-tA3" kind="relationship" relationship="viewControllers" id="c9J-QU-LY4"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zub-kb-KAf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -87,8 +72,5 @@
         <namedColor name="accentPink">
             <color red="0.81176470588235294" green="0.28627450980392155" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
