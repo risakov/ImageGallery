@@ -16,6 +16,9 @@
 		496A399D297984B700033B4A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A399C297984B700033B4A /* HomeViewController.swift */; };
 		496A39A0297984DF00033B4A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A399F297984DF00033B4A /* CameraViewController.swift */; };
 		496A39A52979854B00033B4A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A39A42979854B00033B4A /* ProfileViewController.swift */; };
+		DEF6E41B29801A2A002F8426 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEF6E41A29801A2A002F8426 /* Detail.storyboard */; };
+		DEF6E41D29801A83002F8426 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF6E41C29801A83002F8426 /* DetailViewController.swift */; };
+		DEF6E41F298020F6002F8426 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEF6E41E298020F6002F8426 /* Roboto-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +33,9 @@
 		496A399C297984B700033B4A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		496A399F297984DF00033B4A /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		496A39A42979854B00033B4A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		498598902979A38200B0D56D /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "../../../Roboto/Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		DEF6E41A29801A2A002F8426 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		DEF6E41C29801A83002F8426 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DEF6E41E298020F6002F8426 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +68,7 @@
 		496A39752979638100033B4A /* Image gallery */ = {
 			isa = PBXGroup;
 			children = (
-				4985988D2979A2E300B0D56D /* Recources */,
+				DEF6E42029802102002F8426 /* Resources */,
 				496A3996297983E200033B4A /* Source */,
 				496A39762979638100033B4A /* AppDelegate.swift */,
 				496A39782979638100033B4A /* SceneDelegate.swift */,
@@ -78,6 +83,7 @@
 		496A3996297983E200033B4A /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				DEF6E41529801531002F8426 /* Detail */,
 				496C125729799C7A00637E4C /* View */,
 				496A39A1297984E600033B4A /* Profile */,
 				496A399E297984C500033B4A /* Camera */,
@@ -190,12 +196,45 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		4985988D2979A2E300B0D56D /* Recources */ = {
+		DEF6E41529801531002F8426 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				498598902979A38200B0D56D /* Roboto-Regular.ttf */,
+				DEF6E4192980157B002F8426 /* Model */,
+				DEF6E41829801575002F8426 /* View */,
+				DEF6E41629801552002F8426 /* Controller */,
 			);
-			path = Recources;
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		DEF6E41629801552002F8426 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DEF6E41C29801A83002F8426 /* DetailViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		DEF6E41829801575002F8426 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DEF6E41A29801A2A002F8426 /* Detail.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		DEF6E4192980157B002F8426 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DEF6E42029802102002F8426 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DEF6E41E298020F6002F8426 /* Roboto-Regular.ttf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +297,9 @@
 			files = (
 				496A39832979638200033B4A /* LaunchScreen.storyboard in Resources */,
 				496A39802979638200033B4A /* Assets.xcassets in Resources */,
+				DEF6E41F298020F6002F8426 /* Roboto-Regular.ttf in Resources */,
 				496A397E2979638100033B4A /* Main.storyboard in Resources */,
+				DEF6E41B29801A2A002F8426 /* Detail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +316,7 @@
 				496A39982979843300033B4A /* RootTabBarViewController.swift in Sources */,
 				496A39792979638100033B4A /* SceneDelegate.swift in Sources */,
 				496A399D297984B700033B4A /* HomeViewController.swift in Sources */,
+				DEF6E41D29801A83002F8426 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
