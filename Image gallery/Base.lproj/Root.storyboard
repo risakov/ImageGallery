@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l9J-OV-yo1">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="bCo-9s-02Q">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="HomeStoryboard" storyboardName="Home" id="1GX-SL-79s" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="homeIcon" selectedImage="homeIcon" id="e5p-UV-A3s" userLabel="homeIcon"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Onm-JZ-cMr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-90" y="262"/>
+        </scene>
+        <!--Camera-->
+        <scene sceneID="eHT-sR-Ajt">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CameraStoryboard" storyboardName="Camera" id="LDl-3f-ZSj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="cameraIcon" landscapeImage="cameraIcon" largeContentSizeImage="cameraIcon" selectedImage="cameraIcon" id="wLt-tD-P1b" userLabel="cameraIcon"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bo6-J0-PXh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="175" y="262"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="dOS-EU-B3S">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="profileStoryboard" storyboardName="Profile" id="dY6-JG-tA3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="profileIcon" landscapeImage="profileIcon" largeContentSizeImage="profileIcon" selectedImage="profileIcon" id="QN5-I9-otl" userLabel="profileIcon"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RPh-SP-K9u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="462" y="262"/>
+        </scene>
+        <!--Root Tab Bar View Controller-->
+        <scene sceneID="Br3-ZD-d6C">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="l9J-OV-yo1" customClass="RootTabBarViewController" customModule="Image_gallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RtN-Nx-9rh">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="accentPink"/>
+                        <color key="barTintColor" name="accentPink"/>
+                        <color key="selectedImageTintColor" name="accentPink"/>
+                        <tabBarAppearance key="scrollEdgeAppearance">
+                            <color key="selectionIndicatorTintColor" name="accentPink"/>
+                        </tabBarAppearance>
+                    </tabBar>
+                    <connections>
+                        <segue destination="1GX-SL-79s" kind="relationship" relationship="viewControllers" id="sEJ-Tk-kM5"/>
+                        <segue destination="LDl-3f-ZSj" kind="relationship" relationship="viewControllers" id="Vi6-3z-yr3"/>
+                        <segue destination="dY6-JG-tA3" kind="relationship" relationship="viewControllers" id="c9J-QU-LY4"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zub-kb-KAf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="175" y="-159"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cameraIcon" width="28" height="28"/>
+        <image name="homeIcon" width="28" height="28"/>
+        <image name="profileIcon" width="28" height="28"/>
+        <namedColor name="accentPink">
+            <color red="0.81176470588235294" green="0.28627450980392155" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
