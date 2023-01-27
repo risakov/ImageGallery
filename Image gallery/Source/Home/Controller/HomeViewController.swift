@@ -24,10 +24,11 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationItem.title = "Gallery"
         emptyStateStackView.isHidden = true
         let attributes: [NSAttributedString.Key : Any] = [NSAttributedString.Key.font: UIFont(name: "Roboto-Regular", size: 17)!]
         UISegmentedControl.appearance().setTitleTextAttributes(attributes, for: .normal)
-        
     }
 }
+

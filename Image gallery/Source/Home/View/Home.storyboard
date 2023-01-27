@@ -58,13 +58,13 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8xu-d7-JUi">
                                 <rect key="frame" x="0.0" y="164" width="393" height="654"/>
                                 <connections>
-                                    <segue destination="ymz-sR-cXO" kind="embed" id="lj0-ib-qrm"/>
+                                    <segue destination="4gP-tB-SjL" kind="embed" id="lOM-6H-xre"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Lh-RX-MJ7">
                                 <rect key="frame" x="0.0" y="164" width="393" height="654"/>
                                 <connections>
-                                    <segue destination="bWk-Ah-EcD" kind="embed" id="Tcc-ku-TaC"/>
+                                    <segue destination="0i7-rI-Ddh" kind="embed" id="W6G-lt-feY"/>
                                 </connections>
                             </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Q2y-xP-d3S">
@@ -111,36 +111,6 @@
             </objects>
             <point key="canvasLocation" x="1275.5725190839694" y="578.16901408450713"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="0tw-MQ-8RE">
-            <objects>
-                <viewController id="ymz-sR-cXO" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="yuM-bX-qHq">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="654"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="54h-yt-ndc"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j1P-9c-JM3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="671" y="1270"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="tN7-60-u91">
-            <objects>
-                <viewController id="bWk-Ah-EcD" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Vfn-Uc-A4L">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="654"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Qkv-cD-PN0"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KUm-y3-q4R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2027" y="1270"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="itB-BH-o3Y">
             <objects>
@@ -165,6 +135,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GWC-Aw-Dr3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="338" y="578"/>
+        </scene>
+        <!--Popular-->
+        <scene sceneID="yed-Y6-UBV">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="newStoryboardID" storyboardName="Popular" id="4gP-tB-SjL" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EZp-iR-Vzr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="924" y="1003"/>
+        </scene>
+        <!--New-->
+        <scene sceneID="JtF-yN-COT">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="popularStoryboardID" storyboardName="New" id="0i7-rI-Ddh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="goH-EN-GdC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1601" y="1003"/>
         </scene>
     </scenes>
     <resources>
