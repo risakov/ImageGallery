@@ -18,7 +18,7 @@ class PopularViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nib = UINib(nibName: "ImageCollectionViewCell",bundle: nil)
+        let nib = UINib(nibName: "ImageCollectionViewCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "imageCollectionViewCellIdentifier")
         
         collectionView.dataSource = self
