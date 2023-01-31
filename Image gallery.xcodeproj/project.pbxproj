@@ -36,7 +36,6 @@
 		496A39A42979854B00033B4A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		49C18095297F0F2100032872 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		49C59D77297F3F3C000DF3FA /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		49C59D7B297F415A000DF3FA /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		49C59D7D297F428A000DF3FA /* Camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
 		49C59D7F297F44C5000DF3FA /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		DEF6E41A29801A2A002F8426 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
@@ -60,7 +59,6 @@
 			children = (
 				496A39752979638100033B4A /* Image gallery */,
 				496A39742979638100033B4A /* Products */,
-				DEE1ED622980455000642629 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -204,14 +202,6 @@
 			children = (
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		DEE1ED622980455000642629 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				49C59D7B297F415A000DF3FA /* Roboto-Regular.ttf */,
-			);
-			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		DEF6E41529801531002F8426 /* Detail */ = {
