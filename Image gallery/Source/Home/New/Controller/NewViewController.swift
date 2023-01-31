@@ -21,7 +21,7 @@ class NewViewController: UIViewController {
         collectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
         
         collectionView.dataSource = self
-        collectionView.delegate = self // Разберем позже
+        collectionView.delegate = self
     }
 }
 
@@ -37,7 +37,14 @@ extension NewViewController: UICollectionViewDelegate, UICollectionViewDataSourc
         cell.imageView.image = UIImage(named: imageNameArray[indexPath.row])
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        let detailViewController = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: "detailStoryboardID") as! DetailViewController
+        detailViewController.image = UIImage(named: imageNameArray[indexPath.row])
+        self.navigationController?.pushViewController(detailViewController, animated: true)
+        
+    }
 }
 
 extension NewViewController: UICollectionViewDelegateFlowLayout {
