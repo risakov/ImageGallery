@@ -18,7 +18,7 @@
         <!--HomeViewController-->
         <scene sceneID="Khi-9J-d1G">
             <objects>
-                <viewController storyboardIdentifier="HomeStoryboard" id="qav-qF-img" userLabel="HomeViewController" customClass="HomeViewController" customModule="Image_gallery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeStoryboard" id="qav-qF-img" userLabel="HomeViewController" customClass="HomeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7LC-Jt-thy">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -102,7 +102,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="h7f-MJ-upc"/>
                     <connections>
-                        <outlet property="emptyStateStackView" destination="d9z-Hq-zfU" id="CIy-Uf-Ggm"/>
+                        <outlet property="emptyStateStackView" destination="d9z-Hq-zfU" id="Qn1-Wx-Jby"/>
                         <outlet property="newView" destination="8xu-d7-JUi" id="ugJ-HS-RNs"/>
                         <outlet property="popularView" destination="5Lh-RX-MJ7" id="VN4-aY-iLC"/>
                     </connections>
