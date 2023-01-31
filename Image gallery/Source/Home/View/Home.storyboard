@@ -102,9 +102,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="h7f-MJ-upc"/>
                     <connections>
-                        <outlet property="emptyStateStackView" destination="d9z-Hq-zfU" id="CIy-Uf-Ggm"/>
-                        <outlet property="newView" destination="8xu-d7-JUi" id="ugJ-HS-RNs"/>
-                        <outlet property="popularView" destination="5Lh-RX-MJ7" id="VN4-aY-iLC"/>
+                        <outlet property="emptyStateStackView" destination="d9z-Hq-zfU" id="fbe-U0-z6H"/>
+                        <outlet property="newView" destination="8xu-d7-JUi" id="s4M-Ep-HKW"/>
+                        <outlet property="popularView" destination="5Lh-RX-MJ7" id="0u7-it-7Te"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YMZ-tL-RGP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -142,7 +142,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="newStoryboardID" storyboardName="Popular" id="4gP-tB-SjL" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EZp-iR-Vzr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="924" y="1003"/>
+            <point key="canvasLocation" x="1705" y="1003"/>
         </scene>
         <!--New-->
         <scene sceneID="JtF-yN-COT">
@@ -150,7 +150,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="popularStoryboardID" storyboardName="New" id="0i7-rI-Ddh" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="goH-EN-GdC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1601" y="1003"/>
+            <point key="canvasLocation" x="857" y="1003"/>
         </scene>
     </scenes>
     <resources>

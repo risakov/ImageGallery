@@ -13,7 +13,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var emptyStateStackView: UIStackView!
     
     @IBAction func choiceSegment(_ sender: UISegmentedControl) {
-        if  sender.selectedSegmentIndex == 0 {
+        if sender.selectedSegmentIndex == 0 {
             popularView.alpha = 1
             newView.alpha = 0
         } else {
