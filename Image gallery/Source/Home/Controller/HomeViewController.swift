@@ -13,7 +13,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var emptyStateStackView: UIStackView!
     
     @IBAction func choiceSegment(_ sender: UISegmentedControl) {
-        if  sender.selectedSegmentIndex == 0 {
+        if sender.selectedSegmentIndex == 0 {
             popularView.alpha = 1
             newView.alpha = 0
         } else {
@@ -24,10 +24,11 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationItem.title = "Gallery"
         emptyStateStackView.isHidden = true
         let attributes: [NSAttributedString.Key : Any] = [NSAttributedString.Key.font: UIFont(name: "Roboto-Regular", size: 17)!]
         UISegmentedControl.appearance().setTitleTextAttributes(attributes, for: .normal)
-        
     }
 }
+
