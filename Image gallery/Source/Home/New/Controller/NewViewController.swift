@@ -21,10 +21,9 @@ class NewViewController: UIViewController {
         collectionView.register(nib, forCellWithReuseIdentifier: "imageCollectionViewCellIdentifier")
         
         collectionView.dataSource = self
-        collectionView.delegate = self
+        collectionView.delegate = self // Разберем позже
+        
     }
-    
-    
 }
 
 extension NewViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -52,6 +51,7 @@ extension NewViewController: UICollectionViewDelegateFlowLayout {
         let widthPerItem = availableWidth / itemsPerRow
         return CGSize(width: widthPerItem, height: widthPerItem)
     }
+    
     func collectionView(_collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insertForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8 )
     }
