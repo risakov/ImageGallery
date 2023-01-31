@@ -19,7 +19,7 @@ class PopularViewController: UIViewController {
         super.viewDidLoad()
         
         let nib = UINib(nibName: "ImageCollectionViewCell", bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: "imageCollectionViewCellIdentifier")
+        collectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
         
         collectionView.dataSource = self
         collectionView.delegate = self
