@@ -22,7 +22,6 @@ class NewViewController: UIViewController {
         
         collectionView.dataSource = self
         collectionView.delegate = self // Разберем позже
-        
     }
 }
 
@@ -37,7 +36,6 @@ extension NewViewController: UICollectionViewDelegate, UICollectionViewDataSourc
         }
         cell.imageView.image = UIImage(named: imageNameArray[indexPath.row])
         return cell
-        
     }
         
 }
