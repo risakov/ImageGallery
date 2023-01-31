@@ -17,8 +17,8 @@ class NewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nib = UINib(nibName: "ImageCollectionViewCell",bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: "imageCollectionViewCellIdentifier")
+        let nib = UINib(nibName: "ImageCollectionViewCell", bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
         
         collectionView.dataSource = self
         collectionView.delegate = self // Разберем позже
