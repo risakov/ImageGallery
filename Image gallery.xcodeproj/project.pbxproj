@@ -108,7 +108,6 @@
 		496A39A1297984E600033B4A /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				DE15B7AC297F2231009C49D2 /* Model */,
 				DE15B7A9297F2136009C49D2 /* View */,
 				DE15B7AD297F2239009C49D2 /* Controller */,
 			);
@@ -154,13 +153,6 @@
 			children = (
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		DE15B7AC297F2231009C49D2 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		DE15B7AD297F2239009C49D2 /* Controller */ = {
