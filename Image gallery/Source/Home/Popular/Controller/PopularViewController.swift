@@ -22,11 +22,13 @@ class PopularViewController: UIViewController {
         
         networker.posts(query: "dogs") { [weak self] posts, error in
             if let error = error {
-                print("error", error)
+                let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .actionSheet)
+                alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { _ in}))
+                self?.present(alert, animated: true, completion: nil)
                 return
             }
-            
-            self?.posts = posts!
+            guard let posts = posts else { return }
+            self?.posts = posts
             
             DispatchQueue.main.async {
                 self?.collectionView.reloadData()
@@ -100,7 +102,7 @@ extension PopularViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insertForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8 )
+        return UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

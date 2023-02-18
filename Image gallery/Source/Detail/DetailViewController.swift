@@ -14,11 +14,8 @@ class DetailViewController: UIViewController {
     var date: String?
     
     @IBOutlet weak var detailImageView: UIImageView!
-        
     @IBOutlet weak var detailUsernameView: UILabel!
-    
     @IBOutlet weak var detailImageDescriptionView: UILabel!
-    
     @IBOutlet weak var detailDateView: UILabel!
     
     override func viewDidLoad() {

@@ -12,7 +12,6 @@ enum NetworkManagerError: Error {
     case badData
     case badLocalUrl
 }
-
 fileprivate struct APIResponse: Codable {
     let results: [Post]
 }
@@ -24,12 +23,10 @@ class NetworkManager {
     private var images = NSCache<NSString, NSData>()
     
     let session: URLSession
-    
     init() {
         let config = URLSessionConfiguration.default
         session = URLSession(configuration: config)
     }
-    
     private func components() -> URLComponents {
         var comp = URLComponents()
         comp.scheme = "https"

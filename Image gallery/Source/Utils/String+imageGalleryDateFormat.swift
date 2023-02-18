@@ -6,8 +6,6 @@
 //
 
 import Foundation
-
-
 extension String {
     func imageGalleryDateFormat() -> String {
         let dateFormatter = DateFormatter()
