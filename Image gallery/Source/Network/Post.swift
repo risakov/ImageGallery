@@ -13,6 +13,8 @@ struct PostUserProfileImage: Codable {
 
 struct PostUser: Codable {
   let profile_image: PostUserProfileImage
+    
+  let username: String
 }
 
 struct PostUrls: Codable {
@@ -22,6 +24,8 @@ struct PostUrls: Codable {
 struct Post: Codable {
   let id: String
   let description: String?
+  let created_at: String
+
   let user: PostUser
   let urls: PostUrls
 }

@@ -45,11 +45,9 @@ class PopularViewController: UIViewController {
             return UIImage(data: data)
         }
         return UIImage(systemName: "picture")
-        
     }
     
 }
-
 
 extension PopularViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -77,6 +75,9 @@ extension PopularViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let post = posts[indexPath.item]
         let detailViewController = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: "detailStoryboardID") as! DetailViewController
+        detailViewController.date = post.created_at.imageGalleryDateFormat()
+        detailViewController.username = post.user.username
+        detailViewController.imageDescription = post.description
         
         networker.image(post: post) { [weak self] data, error in
             guard let img = self?.image(data: data) else { return }
@@ -110,4 +111,3 @@ extension PopularViewController: UICollectionViewDelegateFlowLayout {
         return 20
     }
 }
-

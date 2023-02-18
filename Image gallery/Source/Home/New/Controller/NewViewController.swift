@@ -8,8 +8,9 @@
 import UIKit
 
 class NewViewController: UIViewController {
+    
     private let reuseIdentifier = "imageCollectionViewCellIdentifier"
-        
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     let networker = NetworkManager.shared
@@ -22,9 +23,9 @@ class NewViewController: UIViewController {
         networker.posts(query: "cats") { [weak self] posts, error in
             if let error = error {
                 print("error", error)
+                
                 return
             }
-            
             self?.posts = posts!
             
             DispatchQueue.main.async {
@@ -34,7 +35,6 @@ class NewViewController: UIViewController {
         
         let nib = UINib(nibName: "ImageCollectionViewCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
-        
         collectionView.dataSource = self
         collectionView.delegate = self
     }
@@ -68,13 +68,16 @@ extension NewViewController: UICollectionViewDelegate, UICollectionViewDataSourc
                 }
             }
         }
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let post = posts[indexPath.item]
         let detailViewController = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: "detailStoryboardID") as! DetailViewController
-        
+        detailViewController.date = post.created_at.imageGalleryDateFormat()
+        detailViewController.username = post.user.username
+        detailViewController.imageDescription = post.description
         networker.image(post: post) { [weak self] data, error in
             guard let img = self?.image(data: data) else { return }
             DispatchQueue.main.async {
