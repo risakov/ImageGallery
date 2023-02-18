@@ -17,7 +17,6 @@
         <!--Detail View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController restorationIdentifier="detailStoryboardID" storyboardIdentifier="detailStoryboardID" id="Y6W-OH-hqX" customClass="DetailViewController" customModule="Image_gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -73,8 +72,11 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picDetailscreen" translatesAutoresizingMaskIntoConstraints="NO" id="oXl-Zk-kPO">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picDetailscreen" translatesAutoresizingMaskIntoConstraints="NO" id="oXl-Zk-kPO">
                                         <rect key="frame" x="0.0" y="0.0" width="397" height="251"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="oXl-Zk-kPO" secondAttribute="height" multiplier="397:251" id="991-Vv-dFv"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -107,6 +109,7 @@
                         <outlet property="detailImageView" destination="oXl-Zk-kPO" id="HZA-yt-w01"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1052.6717557251909" y="-2.1126760563380285"/>
         </scene>

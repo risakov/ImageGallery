@@ -7,9 +7,10 @@
 
 import UIKit
 
+let accessKey = "iwSUPm_7pKrLAHDTP8g-a-Y3Vqn-TEPBx4pkMfnfMi0"
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
