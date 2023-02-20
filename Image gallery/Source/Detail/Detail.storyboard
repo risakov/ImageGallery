@@ -8,16 +8,10 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Roboto-Regular.ttf">
-            <string>Roboto-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Detail View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController restorationIdentifier="detailStoryboardID" storyboardIdentifier="detailStoryboardID" id="Y6W-OH-hqX" customClass="DetailViewController" customModule="Image_gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -26,14 +20,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOw-ed-5ZZ">
                                 <rect key="frame" x="0.0" y="103" width="397" height="715"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lV5-cZ-Q55">
-                                        <rect key="frame" x="8" y="262" width="45.333333333333336" height="20"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3q-yb-7m2">
-                                        <rect key="frame" x="12" y="330" width="373" height="161.33333333333337"/>
+                                        <rect key="frame" x="12" y="305" width="373" height="161.33333333333337"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="373" id="uWS-uy-YO6"/>
                                         </constraints>
@@ -61,7 +49,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pL-Sb-Rdr">
-                                        <rect key="frame" x="8" y="292" width="76.333333333333329" height="18"/>
+                                        <rect key="frame" x="8" y="267" width="76.333333333333329" height="18"/>
                                         <attributedString key="attributedText">
                                             <fragment content="User Name">
                                                 <attributes>
@@ -73,8 +61,11 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picDetailscreen" translatesAutoresizingMaskIntoConstraints="NO" id="oXl-Zk-kPO">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picDetailscreen" translatesAutoresizingMaskIntoConstraints="NO" id="oXl-Zk-kPO">
                                         <rect key="frame" x="0.0" y="0.0" width="397" height="251"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="oXl-Zk-kPO" secondAttribute="height" multiplier="397:251" id="991-Vv-dFv"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -82,14 +73,12 @@
                                     <constraint firstItem="y3q-yb-7m2" firstAttribute="leading" secondItem="YOw-ed-5ZZ" secondAttribute="leading" constant="12" id="0dT-ZH-XP5"/>
                                     <constraint firstItem="9pL-Sb-Rdr" firstAttribute="leading" secondItem="YOw-ed-5ZZ" secondAttribute="leading" constant="8" id="37m-HV-FhZ"/>
                                     <constraint firstAttribute="bottom" secondItem="y3q-yb-7m2" secondAttribute="bottom" constant="16" id="E3Z-ot-JLT"/>
-                                    <constraint firstItem="9pL-Sb-Rdr" firstAttribute="top" secondItem="lV5-cZ-Q55" secondAttribute="bottom" constant="10" id="Myu-P4-wjW"/>
-                                    <constraint firstItem="lV5-cZ-Q55" firstAttribute="leading" secondItem="YOw-ed-5ZZ" secondAttribute="leading" constant="8" id="NF4-VU-iwO"/>
+                                    <constraint firstItem="9pL-Sb-Rdr" firstAttribute="top" secondItem="oXl-Zk-kPO" secondAttribute="bottom" constant="16" id="M4b-SC-zXc"/>
                                     <constraint firstAttribute="trailing" secondItem="y3q-yb-7m2" secondAttribute="trailing" constant="12" id="TTQ-Tm-nHf"/>
                                     <constraint firstItem="oXl-Zk-kPO" firstAttribute="leading" secondItem="YOw-ed-5ZZ" secondAttribute="leading" id="bmi-P5-xFg"/>
                                     <constraint firstItem="oXl-Zk-kPO" firstAttribute="top" secondItem="YOw-ed-5ZZ" secondAttribute="top" id="eHj-OM-bAf"/>
                                     <constraint firstAttribute="trailing" secondItem="oXl-Zk-kPO" secondAttribute="trailing" id="ghd-CM-xYc"/>
                                     <constraint firstItem="y3q-yb-7m2" firstAttribute="top" secondItem="9pL-Sb-Rdr" secondAttribute="bottom" constant="20" id="iA4-bL-vHO"/>
-                                    <constraint firstItem="lV5-cZ-Q55" firstAttribute="top" secondItem="oXl-Zk-kPO" secondAttribute="bottom" constant="11" id="vL7-MI-dBL"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -104,9 +93,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="azY-aQ-hr9"/>
                     <connections>
+                        <outlet property="detailDateView" destination="aEV-Pf-JmO" id="Pa6-6i-wfl"/>
+                        <outlet property="detailImageDescriptionView" destination="y3q-yb-7m2" id="5Xa-yt-mnX"/>
                         <outlet property="detailImageView" destination="oXl-Zk-kPO" id="HZA-yt-w01"/>
+                        <outlet property="detailUsernameView" destination="9pL-Sb-Rdr" id="ODp-iT-pP8"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1052.6717557251909" y="-2.1126760563380285"/>
         </scene>
