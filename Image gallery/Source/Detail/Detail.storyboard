@@ -48,8 +48,14 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picDetailscreen" translatesAutoresizingMaskIntoConstraints="NO" id="oXl-Zk-kPO">
+                                        <rect key="frame" x="0.0" y="0.0" width="397" height="251"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="oXl-Zk-kPO" secondAttribute="height" multiplier="397:251" id="991-Vv-dFv"/>
+                                        </constraints>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pL-Sb-Rdr">
-                                        <rect key="frame" x="8" y="267" width="76.333333333333329" height="18"/>
+                                        <rect key="frame" x="12" y="267" width="76.333333333333329" height="18"/>
                                         <attributedString key="attributedText">
                                             <fragment content="User Name">
                                                 <attributes>
@@ -61,17 +67,11 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picDetailscreen" translatesAutoresizingMaskIntoConstraints="NO" id="oXl-Zk-kPO">
-                                        <rect key="frame" x="0.0" y="0.0" width="397" height="251"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="oXl-Zk-kPO" secondAttribute="height" multiplier="397:251" id="991-Vv-dFv"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="y3q-yb-7m2" firstAttribute="leading" secondItem="YOw-ed-5ZZ" secondAttribute="leading" constant="12" id="0dT-ZH-XP5"/>
-                                    <constraint firstItem="9pL-Sb-Rdr" firstAttribute="leading" secondItem="YOw-ed-5ZZ" secondAttribute="leading" constant="8" id="37m-HV-FhZ"/>
+                                    <constraint firstItem="9pL-Sb-Rdr" firstAttribute="leading" secondItem="YOw-ed-5ZZ" secondAttribute="leading" constant="12" id="37m-HV-FhZ"/>
                                     <constraint firstAttribute="bottom" secondItem="y3q-yb-7m2" secondAttribute="bottom" constant="16" id="E3Z-ot-JLT"/>
                                     <constraint firstItem="9pL-Sb-Rdr" firstAttribute="top" secondItem="oXl-Zk-kPO" secondAttribute="bottom" constant="16" id="M4b-SC-zXc"/>
                                     <constraint firstAttribute="trailing" secondItem="y3q-yb-7m2" secondAttribute="trailing" constant="12" id="TTQ-Tm-nHf"/>
