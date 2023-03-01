@@ -61,12 +61,6 @@
                                     <segue destination="4gP-tB-SjL" kind="embed" id="lOM-6H-xre"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Lh-RX-MJ7">
-                                <rect key="frame" x="0.0" y="164" width="393" height="654"/>
-                                <connections>
-                                    <segue destination="0i7-rI-Ddh" kind="embed" id="W6G-lt-feY"/>
-                                </connections>
-                            </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Q2y-xP-d3S">
                                 <rect key="frame" x="16" y="118" width="361" height="32"/>
                                 <segments>
@@ -78,6 +72,12 @@
                                     <action selector="choiceSegment:" destination="qav-qF-img" eventType="valueChanged" id="9Aq-NX-qK6"/>
                                 </connections>
                             </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Lh-RX-MJ7">
+                                <rect key="frame" x="0.0" y="164" width="393" height="654"/>
+                                <connections>
+                                    <segue destination="0i7-rI-Ddh" kind="embed" id="W6G-lt-feY"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3e7-Xj-yPM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
