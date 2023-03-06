@@ -6,73 +6,50 @@
 //
 
 import Foundation
+import Alamofire
 
 enum NetworkManagerError: Error {
     case badResponse(URLResponse?)
     case badData
     case badLocalUrl
 }
+
 fileprivate struct APIResponse: Codable {
     let results: [Post]
 }
 
 class NetworkManager {
     
+    let accessKey = "bbc33cc9f86e189e1387e31a57dbd74a2dba4a5f4540f7a0dbcb599fd72f61f2"
+    let endpoint = "https://api.unsplash.com/search/photos"
+    
     static var shared = NetworkManager()
     
     private var images = NSCache<NSString, NSData>()
     
     let session: URLSession
+    
     init() {
         let config = URLSessionConfiguration.default
         session = URLSession(configuration: config)
     }
-    private func components() -> URLComponents {
-        var comp = URLComponents()
-        comp.scheme = "https"
-        comp.host = "api.unsplash.com"
-        return comp
-    }
-    
-    private func request(url: URL) -> URLRequest {
-        var request = URLRequest(url: url)
-        request.addValue("Client-ID \(accessKey)", forHTTPHeaderField: "Authorization")
-        return request
-    }
     
     func posts(query: String, completion: @escaping ([Post]?, Error?) -> (Void)) {
-        var comp = components()
-        comp.path = "/search/photos"
-        comp.queryItems = [
-            URLQueryItem(name: "query", value: query)
+        let parameters: Parameters = [
+            "query": query
         ]
-        let req = request(url: comp.url!)
+        let headers : HTTPHeaders = [
+            "Authorization": "Client-ID \(accessKey)",
+        ]
         
-        let task = session.dataTask(with: req) { data, response, error in
-            if let error = error {
-                completion(nil, error)
-                return
-            }
-            
-            guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
-                completion(nil, NetworkManagerError.badResponse(response))
-                return
-            }
-            
-            guard let data = data else {
-                completion(nil, NetworkManagerError.badData)
-                return
-            }
-            
-            do {
-                let response = try JSONDecoder().decode(APIResponse.self, from: data)
+        AF.request(endpoint, method: .get, parameters: parameters, headers: headers).responseDecodable(of: APIResponse.self) { data in
+            switch data.result {
+            case .success(let response):
                 completion(response.results, nil)
-            } catch let error {
+            case .failure(let error):
                 completion(nil, error)
             }
         }
-        
-        task.resume()
     }
     
     private func download(imageURL: URL, completion: @escaping (Data?, Error?) -> (Void)) {
@@ -114,10 +91,4 @@ class NetworkManager {
         let url = URL(string: post.urls.regular)!
         download(imageURL: url, completion: completion)
     }
-    
-    func profileImage(post: Post, completion: @escaping (Data?, Error?) -> (Void)) {
-        let url = URL(string: post.user.profile_image.medium)!
-        download(imageURL: url, completion: completion)
-    }
-    
 }

@@ -80,6 +80,7 @@ extension NewViewController: UICollectionViewDelegate, UICollectionViewDataSourc
         detailViewController.date = post.created_at.imageGalleryDateFormat()
         detailViewController.username = post.user.username
         detailViewController.imageDescription = post.description
+        // detailViewController.imageUrl = post.urls.regular
         networker.image(post: post) { [weak self] data, error in
             guard let img = self?.image(data: data) else { return }
             DispatchQueue.main.async {
