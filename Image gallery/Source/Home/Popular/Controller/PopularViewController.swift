@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PopularViewController: UIViewController {
     
@@ -62,14 +63,8 @@ extension PopularViewController: UICollectionViewDelegate, UICollectionViewDataS
         cell.imageView.image = nil
         let representedIdentifier = post.id
         cell.representedIdentifier = representedIdentifier
-        
-        networker.image(post: post) { [weak self] data, error in
-            guard let img = self?.image(data: data) else { return }
-            DispatchQueue.main.async {
-                if (cell.representedIdentifier == representedIdentifier) {
-                    cell.imageView.image = img
-                }
-            }
+        if let url = URL(string: post.urls.regular) {
+            cell.imageView.kf.setImage(with: url)
         }
         return cell
     }
@@ -80,14 +75,7 @@ extension PopularViewController: UICollectionViewDelegate, UICollectionViewDataS
         detailViewController.date = post.created_at.imageGalleryDateFormat()
         detailViewController.username = post.user.username
         detailViewController.imageDescription = post.description
-        
-        networker.image(post: post) { [weak self] data, error in
-            guard let img = self?.image(data: data) else { return }
-            DispatchQueue.main.async {
-                detailViewController.image = img
-                self?.navigationController?.pushViewController(detailViewController, animated: true)
-            }
-        }
+        detailViewController.imageUrl = post.urls.regular
     }
 }
 
