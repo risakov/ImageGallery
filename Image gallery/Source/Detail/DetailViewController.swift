@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DetailViewController: UIViewController {
-    var image: UIImage?
+    var imageUrl: String?
     var username: String?
     var imageDescription: String?
     var date: String?
@@ -20,8 +21,9 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        detailImageView.image = image
+        if let url = URL(string: imageUrl ?? "") {
+            detailImageView.kf.setImage(with: url)
+        }
         detailDateView.text = date
         detailImageDescriptionView.text = imageDescription
         detailUsernameView.text = username
