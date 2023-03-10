@@ -13,13 +13,21 @@ class NewViewController: UIViewController {
     private let reuseIdentifier = "imageCollectionViewCellIdentifier"
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
+  
     let networker = NetworkManager.shared
     
     var posts: [Post] = []
+    var refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        refreshControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+        collectionView.refreshControl = refreshControl
+    }
+        @objc func refresh(send: UIRefreshControl) {
+            self.collectionView.reloadData()
+            self.refreshControl.endRefreshing()
         
         networker.posts(query: "cats") { [weak self] posts, error in
             if let error = error {
@@ -30,7 +38,6 @@ class NewViewController: UIViewController {
             }
             guard let posts = posts else { return }
             self?.posts = posts
-            
             DispatchQueue.main.async {
                 self?.collectionView.reloadData()
             }
@@ -41,6 +48,7 @@ class NewViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
     }
+    
     
     func image(data: Data?) -> UIImage? {
         if let data = data {

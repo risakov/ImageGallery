@@ -17,9 +17,16 @@ class PopularViewController: UIViewController {
     let networker = NetworkManager.shared
     
     var posts: [Post] = []
-    
+    var refreshControl = UIRefreshControl()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        refreshControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+        collectionView.refreshControl = refreshControl
+    }
+        @objc func refresh(send: UIRefreshControl) {
+            self.collectionView.reloadData()
+            self.refreshControl.endRefreshing()
         
         networker.posts(query: "dogs") { [weak self] posts, error in
             if let error = error {
