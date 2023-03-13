@@ -11,35 +11,50 @@ import Kingfisher
 class NewViewController: UIViewController {
     
     private let reuseIdentifier = "imageCollectionViewCellIdentifier"
+    private let query = "cats"
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
+  
     let networker = NetworkManager.shared
     
     var posts: [Post] = []
+    var refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        networker.posts(query: "cats") { [weak self] posts, error in
+        refreshControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+        collectionView.refreshControl = refreshControl
+        
+        fetchImages(withQuery: query)
+        
+        let nib = UINib(nibName: "ImageCollectionViewCell", bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
+        
+        collectionView.dataSource = self
+        collectionView.delegate = self
+    }
+    
+    @objc func refresh(send: UIRefreshControl) {
+        fetchImages(withQuery: query)
+    }
+    
+    func fetchImages(withQuery query: String) {
+        networker.posts(query: query) { [weak self] posts, error in
             if let error = error {
                 let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .actionSheet)
                 alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { _ in }))
                 self?.present(alert, animated: true, completion: nil)
+                self?.refreshControl.endRefreshing()
                 return
             }
             guard let posts = posts else { return }
             self?.posts = posts
-            
             DispatchQueue.main.async {
                 self?.collectionView.reloadData()
+                self?.refreshControl.endRefreshing()
             }
         }
-        
-        let nib = UINib(nibName: "ImageCollectionViewCell", bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
-        collectionView.dataSource = self
-        collectionView.delegate = self
     }
     
     func image(data: Data?) -> UIImage? {
