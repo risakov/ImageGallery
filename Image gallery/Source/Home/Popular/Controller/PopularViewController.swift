@@ -19,6 +19,7 @@ class PopularViewController: UIViewController {
     
     var posts: [Post] = []
     var refreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -89,6 +90,7 @@ extension PopularViewController: UICollectionViewDelegate, UICollectionViewDataS
         detailViewController.username = post.user.username
         detailViewController.imageDescription = post.description
         detailViewController.imageUrl = post.urls.regular
+        self.navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
 
