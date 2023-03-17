@@ -14,7 +14,7 @@ class NewViewController: UIViewController {
     private let query = "cats"
     
     @IBOutlet weak var collectionView: UICollectionView!
-  
+    
     let networker = NetworkManager.shared
     
     var posts: [Post] = []
@@ -90,6 +90,7 @@ extension NewViewController: UICollectionViewDelegate, UICollectionViewDataSourc
         detailViewController.username = post.user.username
         detailViewController.imageDescription = post.description
         detailViewController.imageUrl = post.urls.regular
+        self.navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
 
