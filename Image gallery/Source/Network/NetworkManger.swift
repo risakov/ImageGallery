@@ -34,9 +34,10 @@ class NetworkManager {
         session = URLSession(configuration: config)
     }
     
-    func posts(query: String, completion: @escaping ([Post]?, Error?) -> (Void)) {
+    func getPosts(query: String, page: Int, completion: @escaping ([Post]?, Error?) -> (Void)) {
         let parameters: Parameters = [
-            "query": query
+            "query": query,
+            "page": page
         ]
         let headers : HTTPHeaders = [
             "Authorization": "Client-ID \(accessKey)",

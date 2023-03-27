@@ -19,28 +19,43 @@ class PopularViewController: UIViewController {
     
     var posts: [Post] = []
     var refreshControl = UIRefreshControl()
+    var isLoading = false                           //Флаг, который означает загрузку в данный момент
+    var currentPage: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         refreshControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
         collectionView.refreshControl = refreshControl
-        
-        fetchImages(withQuery: query)
-        
-        let nib = UINib(nibName: "ImageCollectionViewCell", bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
-        
-        collectionView.dataSource = self
+        let nib = UINib(nibName: "ImageCollectionViewCell", bundle: nil) //Переменная содержащая ксиб
+        collectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier) // Говорим коллекции, что ячейки должны быть такие как ксиб файл
+        collectionView.dataSource = self  //Связываем коллекцию и наш вьюконтроллер (Отвечает за кол-во ячеек и тд)
         collectionView.delegate = self
+        fetchImages(withQuery: query)
     }
     
+        func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {   //Вызывается метод для каждой отдельной ячейки, перед тем как они покажутся на экране
+            if indexPath.item == posts.count - 1 && !isLoading {                  //Индекс ячейки
+                loadMoreData()
+    } 
+}
+
+func loadMoreData() {             // Функция для загрузки новой пачки
+    if !self.isLoading {
+        self.isLoading = true
+        self.currentPage += 1
+        self.fetchImages(withQuery: self.query)
+    }
+}
+    
     @objc func refresh(send: UIRefreshControl) {
+        posts = []
+        currentPage = 0
         fetchImages(withQuery: query)
     }
     
     func fetchImages(withQuery query: String) {
-        networker.posts(query: query) { [weak self] posts, error in
+        networker.getPosts(query: query, page: 0) { [weak self] posts, error in
             if let error = error {
                 let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .actionSheet)
                 alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { _ in }))
@@ -49,21 +64,14 @@ class PopularViewController: UIViewController {
                 return
             }
             guard let posts = posts else { return }
-            self?.posts = posts
+            self?.posts += posts
             DispatchQueue.main.async {
                 self?.collectionView.reloadData()
                 self?.refreshControl.endRefreshing()
+                self?.isLoading = false
             }
         }
     }
-    
-    func image(data: Data?) -> UIImage? {
-        if let data = data {
-            return UIImage(data: data)
-        }
-        return UIImage(systemName: "picture")
-    }
-    
 }
 
 extension PopularViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -74,7 +82,6 @@ extension PopularViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ImageCollectionViewCell
         let post = posts[indexPath.item]
-        cell.imageView.image = nil
         let representedIdentifier = post.id
         cell.representedIdentifier = representedIdentifier
         if let url = URL(string: post.urls.regular) {
